@@ -26,7 +26,7 @@ public class SynapsVerify extends WebView {
         this.onFinishListener = onFinishListener;
     }
     public void launch(String type, String sessionID, String stepID, Color color) {
-        //this.setWebChromeClient(new MyWebViewClient());
-        this.loadUrl("http://192.168.43.32:3001/?session_id=4cdef949-fb269501-d9245e4e-8ddb1b44&service=individual&type=embed&lang=en");
+        this.setWebChromeClient(new MyWebViewClient());
+        this.loadUrl("https://verify.synaps.io/?session_id=4cdef949-fb269501-d9245e4e-8ddb1b44&service=individual&type=embed&lang=en");
     }
 }
