@@ -1,7 +1,6 @@
 package com.synaps;
 
 import android.os.Build;
-import android.webkit.ConsoleMessage;
 import android.webkit.PermissionRequest;
 import android.webkit.WebChromeClient;
 

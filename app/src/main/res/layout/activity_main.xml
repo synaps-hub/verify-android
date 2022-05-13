@@ -21,6 +21,8 @@
             android:id="@+id/webview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:primary_color="#090909"
+            app:secondary_color="#FB0101"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:usesCleartextTraffic="true">

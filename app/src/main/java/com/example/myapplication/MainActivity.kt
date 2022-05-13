@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         mButton = findViewById<Button>(R.id.buttonPanel);
         mWebView = findViewById<SynapsVerify>(R.id.webview);
         mButton!!.setOnClickListener(View.OnClickListener {
-            mWebView!!.launch("", "", "", Color("", ""))
+            mWebView!!.launch(this,"91eec035-13beb208-083d64e2-86ec7693")
         })
         mWebView!!.setOnReadyListener(OnReadyListener {
             Log.d("OmarSy", "ready")
