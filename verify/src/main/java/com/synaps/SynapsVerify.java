@@ -17,13 +17,14 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 
-public class SynapsVerify extends WebView {
+class SynapsVerify extends WebView {
     public OnReadyListener onReadyListener;
     public OnFinishListener onFinishListener;
-    private String baseUrl = "https://verify.synaps.io";
+    protected String baseUrl;
 
-    public SynapsVerify(Context context) {
+    public SynapsVerify(Context context, String endpoint) {
         super(context);
+        this.baseUrl = endpoint;
         try {
             this.init(context, null, 0);
         } catch (URISyntaxException e) {
@@ -31,16 +32,18 @@ public class SynapsVerify extends WebView {
         }
     }
 
-    public SynapsVerify(Context context, AttributeSet attrs) {
+    public SynapsVerify(Context context, AttributeSet attrs, String endpoint) {
         super(context, attrs);
+        this.baseUrl = endpoint;
         try {
             this.init(context, attrs, 0);
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
     }
-    public SynapsVerify(Context context, AttributeSet attrs, int defStyleAttr) {
+    public SynapsVerify(Context context, AttributeSet attrs, int defStyleAttr, String endpoint) {
         super(context, attrs, defStyleAttr);
+        this.baseUrl = endpoint;
         try {
             this.init(context, attrs, defStyleAttr);
         } catch (URISyntaxException e) {
