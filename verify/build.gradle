@@ -44,6 +44,14 @@ subprojects {
                 from(components.java)
             }
         }
+        afterEvaluate {
+            publications {
+                libJar(MavenPublication) {
+                    from components.java
+                    artifact(tasks["sourcesJar"])
+                }
+            }
+        }
     }
 }
 
