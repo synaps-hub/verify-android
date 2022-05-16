@@ -7,16 +7,16 @@ import androidx.appcompat.app.AppCompatActivity
 import com.synaps.Color
 import com.synaps.OnFinishListener
 import com.synaps.OnReadyListener
-import com.synaps.SynapsVerify
+import com.synaps.SynapsIndividualVerify
 
 class MainActivity : AppCompatActivity() {
     private var mButton: Button? = null
-    private var mWebView: SynapsVerify? = null
+    private var mWebView: SynapsIndividualVerify? = null;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         mButton = findViewById<Button>(R.id.buttonPanel);
-        mWebView = findViewById<SynapsVerify>(R.id.webview);
+        mWebView = findViewById<SynapsIndividualVerify>(R.id.webview);
         mButton!!.setOnClickListener(View.OnClickListener {
             mWebView!!.launch(this,"91eec035-13beb208-083d64e2-86ec7693")
         })
