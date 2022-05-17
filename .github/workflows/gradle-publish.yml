@@ -41,4 +41,6 @@ jobs:
       with:
         arguments: :verify:publish
       env:
+        USERNAME: ${{ github.actor }}
+        TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PKG_VERSION: ${{ github.event.release.tag_name }}
