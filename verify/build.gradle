@@ -44,7 +44,7 @@ afterEvaluate {
             maven(MavenPublication) {
                 groupId mGroupId
                 artifactId mArtifactId
-
+                version System.getenv("PKG_VERSION")
                 from components.release
 
                 artifact androidSourcesJar

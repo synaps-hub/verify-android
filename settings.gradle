@@ -10,6 +10,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://maven.pkg.github.com/synaps-hub' }
     }
 }
 rootProject.name = "My Application"
