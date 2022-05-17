@@ -62,8 +62,8 @@ afterEvaluate {
                 name = "GitHubPackages"
                 url = uri("https://maven.pkg.github.com/synaps-hub/verify-android")
                 credentials {
-                    username = System.getenv("GPR_USER")
-                    password = System.getenv("GPR_KEY")
+                    username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+                    password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
                 }
             }
         }
