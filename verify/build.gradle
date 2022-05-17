@@ -26,35 +26,6 @@ android {
     }
 }
 
-subprojects {
-    apply plugin: "maven-publish"
-    publishing {
-        repositories {
-            maven {
-                name = "GitHubPackages"
-                url = uri("https://maven.pkg.github.com/synaps-hub/verify-android")
-                credentials {
-                    username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-                    password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
-                }
-            }
-        }
-        publications {
-            multipleVariants {
-                allVariants()
-                withJavadocs()
-            }
-            release(MavenPublication) {
-                groupId 'com.synaps.verify'
-                artifactId 'verify'
-                version "$artifact_version"
-                afterEvaluate {
-                    from components.release
-                }
-            }
-        }
-    }
-}
 
 dependencies {
 
