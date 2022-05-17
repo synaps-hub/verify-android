@@ -41,15 +41,10 @@ subprojects {
         }
         publications {
             gpr(MavenPublication) {
+                groupId 'com.synaps.verify'
+                artifactId 'verify'
+                version "$artifact_version"
                 from(components.java)
-            }
-        }
-        afterEvaluate {
-            publications {
-                libJar(MavenPublication) {
-                    from components.java
-                    artifact(tasks["sourcesJar"])
-                }
             }
         }
     }
