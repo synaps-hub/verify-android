@@ -40,11 +40,17 @@ subprojects {
             }
         }
         publications {
-            gpr(MavenPublication) {
+            multipleVariants {
+                allVariants()
+                withJavadocs()
+            }
+            release(MavenPublication) {
                 groupId 'com.synaps.verify'
                 artifactId 'verify'
                 version "$artifact_version"
-                from(components.java)
+                afterEvaluate {
+                    from components.release
+                }
             }
         }
     }
