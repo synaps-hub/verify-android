@@ -58,6 +58,7 @@ afterEvaluate {
 
         // 5. Update repository details and credentials.
         repositories {
+            mavenLocal()
             maven {
                 name = "GitHubPackages"
                 url = uri("https://maven.pkg.github.com/synaps-hub/verify-android")
