@@ -41,30 +41,10 @@ task androidSourcesJar(type: Jar) {
 afterEvaluate {
     publishing {
         publications {
-            release(MavenPublication) {
-                groupId mGroupId
-                artifactId mArtifactId
-                version System.getenv("PKG_VERSION")
+           release(MavenPublication) {
                 from components.release
-
-                artifact androidSourcesJar
-
-                pom {
-                    name = mLibraryName
-                    description = mLibraryDescription
-                }
-            }
-        }
-
-        repositories {
-            mavenLocal()
-            maven {
-                name = "GitHubPackages"
-                url = uri("https://maven.pkg.github.com/synaps-hub/verify-android")
-                credentials {
-                    username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-                    password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
-                }
+                groupId = 'com.synaps'
+                artifactId = 'verify'
             }
         }
     }
