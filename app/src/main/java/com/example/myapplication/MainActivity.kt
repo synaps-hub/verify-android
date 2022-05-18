@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         mButton = findViewById<Button>(R.id.buttonPanel);
-        mWebView = findViewById<SynapsIndividualVerify>(R.id.webview);
+        mWebView = findViewById<SynapsIndividualVerify>(R.id.synaps);
         mButton!!.setOnClickListener(View.OnClickListener {
             mWebView!!.launch(this,"91eec035-13beb208-083d64e2-86ec7693")
         })

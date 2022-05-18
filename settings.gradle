@@ -10,7 +10,14 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://maven.pkg.github.com/synaps-hub' }
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/synaps-hub/verify-android")
+            credentials {
+                username = ''
+                password = ''
+            }
+        }
     }
 }
 rootProject.name = "My Application"
