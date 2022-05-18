@@ -18,16 +18,13 @@
             android:text="Button" />
 
         <com.synaps.SynapsIndividualVerify
-            android:id="@+id/webview"
+            android:id="@+id/synaps"
             android:layout_width="match_parent"
-            android:layout_height="554dp"
+            android:layout_height="621dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:usesCleartextTraffic="true"
             app:primary_color="#090909"
-            app:secondary_color="#FB0101">
-
-        </com.synaps.SynapsIndividualVerify>
+            app:secondary_color="#FB0101" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
