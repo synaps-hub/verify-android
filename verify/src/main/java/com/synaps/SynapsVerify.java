@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.res.TypedArray;
 import android.graphics.Color;
+import android.hardware.camera2.CameraAccessException;
 import android.util.AttributeSet;
 import android.webkit.WebView;
 
@@ -96,7 +97,7 @@ class SynapsVerify extends WebView {
                 oldUri.getPath(), newQuery, oldUri.getFragment()).toString();
     }
 
-    public void launch(Activity activity, String sessionID) {
+    public void launch(String sessionID) throws  CameraAccessException {
         try {
             String url = this.appendUri(this.baseUrl, "session_id="+sessionID);
             if (ContextCompat.checkSelfPermission(
@@ -105,9 +106,7 @@ class SynapsVerify extends WebView {
                 this.setWebChromeClient(new MyWebViewClient());
                 this.loadUrl(url);
             } else {
-                ActivityCompat.requestPermissions(activity,
-                        new String[]{Manifest.permission.CAMERA},
-                        10);
+                throw new CameraAccessException(CameraAccessException.CAMERA_DISABLED);
             }
         } catch (URISyntaxException e) {
             e.printStackTrace();

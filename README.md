@@ -56,7 +56,14 @@ dependencies {
 
 ```kotlin
 synaps = findViewById<SynapsIndividualVerify>(R.id.synaps);
-synaps!!.launch(this, SESSION_ID)
+ try {
+    synaps!!.launch(SESSION_ID)
+} catch (e: CameraAccessException) {
+    // handle when user disable the camera permission
+    ActivityCompat.requestPermissions(this,
+        arrayOf<String>( Manifest.permission.CAMERA),
+        SYNAPS_REQUEST_CAMERA_PERMISSION_CODE);
+}
 ```
 
 **Third**, you need to need to listen `setOnReadyListener` to listen when the page is fully loaded.
