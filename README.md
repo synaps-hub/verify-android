@@ -2,6 +2,7 @@
 
 > Synaps Android Verify SDK 
 
+[![](https://jitpack.io/v/synaps-hub/verify-android.svg)](https://jitpack.io/#synaps-hub/verify-android)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 **Synaps is an all-in-one compliance platform**. It offers a simple, fast and secure way to meet compliance requirements at scale.
@@ -11,13 +12,25 @@
 ![enter image description here](https://storage.googleapis.com/synaps-docs-media/synaps-verify.png)
 
 ## Gradle Dependency
+To get a Git project into your build:
 
-Add this to your module's `build.gradle` file:
+**Step 1.** Add the JitPack repository to your build file
+
+```gradle
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+**Step 2.** Add the dependency
 
 ```gradle
 dependencies {
   ...
-  implementation 'com.synaps:verify:0.1.17'
+  implementation 'com.github.synaps-hub:verify-android:0.1.26'
 }
 ```
 
@@ -50,7 +63,7 @@ synaps!!.launch(this, SESSION_ID)
 
 ```kotlin
 synaps.setOnReadyListener(OnReadyListener {
-    ...
+ 
 })
 ```
 
@@ -58,7 +71,7 @@ synaps.setOnReadyListener(OnReadyListener {
 
 ```kotlin
 synaps.setOnFinishListener(OnFinishListener {
-   ...
+   
 })
 ```
 
