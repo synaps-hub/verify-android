@@ -1,4 +1,4 @@
-package com.synaps;
+package io.synaps;
 
 import android.content.Context;
 import android.webkit.JavascriptInterface;

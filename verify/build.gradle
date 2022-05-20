@@ -4,7 +4,7 @@ plugins {
 }
 
 ext {
-    mGroupId = "com.synaps"
+    mGroupId = "io.synaps"
     mArtifactId = "verify"
 
     mLibraryName = "SynapsVerify"
@@ -43,7 +43,7 @@ afterEvaluate {
         publications {
            release(MavenPublication) {
                 from components.release
-                groupId = 'com.synaps'
+                groupId = 'io.synaps'
                 artifactId = 'verify'
             }
         }

@@ -1,4 +1,4 @@
-package com.synaps;
+package io.synaps;
 
 public class Color {
     String primary;

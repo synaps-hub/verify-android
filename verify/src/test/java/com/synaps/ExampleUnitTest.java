@@ -1,4 +1,4 @@
-package com.synaps;
+package io.synaps;
 
 import org.junit.Test;
 

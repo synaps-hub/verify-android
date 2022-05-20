@@ -1,4 +1,4 @@
-package com.synaps;
+package io.synaps;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.synaps.test", appContext.getPackageName());
+        assertEquals("io.synaps.test", appContext.getPackageName());
     }
 }

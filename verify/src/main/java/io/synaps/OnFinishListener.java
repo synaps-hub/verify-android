@@ -1,4 +1,4 @@
-package com.synaps;
+package io.synaps;
 
 public interface OnFinishListener {
     void onFinish();

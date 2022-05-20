@@ -1,4 +1,4 @@
-package com.synaps;
+package io.synaps;
 
 import android.os.Build;
 import android.webkit.PermissionRequest;

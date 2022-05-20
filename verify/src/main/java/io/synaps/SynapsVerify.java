@@ -1,7 +1,6 @@
-package com.synaps;
+package io.synaps;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.res.TypedArray;
@@ -10,7 +9,6 @@ import android.hardware.camera2.CameraAccessException;
 import android.util.AttributeSet;
 import android.webkit.WebView;
 
-import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import java.lang.String;

@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:text="Button" />
 
-        <com.synaps.SynapsIndividualVerify
+        <io.synaps.SynapsIndividualVerify
             android:id="@+id/synaps"
             android:layout_width="match_parent"
             android:layout_height="621dp"

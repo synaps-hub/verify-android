@@ -42,7 +42,7 @@ dependencies {
 **First,** you need to add `SynapsIndividualVerify` in your layout:
 
 ```xml
-<com.synaps.SynapsIndividualVerify
+<io.synaps.SynapsIndividualVerify
     android:id="@+id/synaps"
     android:layout_width="match_parent"
     android:layout_height="554dp"

@@ -10,9 +10,9 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import com.synaps.OnFinishListener
-import com.synaps.OnReadyListener
-import com.synaps.SynapsIndividualVerify
+import io.synaps.OnFinishListener
+import io.synaps.OnReadyListener
+import io.synaps.SynapsIndividualVerify
 
 
 class MainActivity : AppCompatActivity() {
